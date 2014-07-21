@@ -56,8 +56,7 @@ public class Player : MonoBehaviour {
 		
 		foreach (IPlayerState ps in movementState){
 			ps.Update();
-		}
-		
+		}		
 	}
 	
 	void ChangeWeaponState(IPlayerState state){
