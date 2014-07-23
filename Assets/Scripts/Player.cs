@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
 	public Transform groundCheck;
 	public float hMovement;	
 	public LayerMask whatIsGround;
+	Animator anim;
 	
 	// two separate state
 	public IPlayerState[] movementState = new IPlayerState[3];
@@ -24,9 +25,12 @@ public class Player : MonoBehaviour {
 	public static readonly int RUNNING = 0;
 	public static readonly int DASHING = 1;
 	public static readonly int JUMPING = 2;
+	
+	bool blocking = false;
 	// Use this for initialization
 	void Start () {
 		initializeVariables();
+		anim = GetComponent<Animator>();
 	}
 	
 	void initializeVariables(){
@@ -51,12 +55,19 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		FlipCheck();
+		anim.SetFloat ("speed", Mathf.Abs(hMovement));
+		anim.SetBool ("blocking", blocking);
 		//ManageStateTransitions();
 		//weaponState.Update();
 		
 		foreach (IPlayerState ps in movementState){
 			ps.Update();
 		}		
+		
+		if ((!Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.LeftArrow)) && Input.GetKey(KeyCode.DownArrow)){
+			blocking = true;
+		}else
+			blocking = false;
 	}
 	
 	void ChangeWeaponState(IPlayerState state){
@@ -67,19 +78,6 @@ public class Player : MonoBehaviour {
 		//movementState = state;
 	}
 	
-	void ManageStateTransitions(){
-		
-		if (Input.GetKeyDown(KeyCode.UpArrow)){
-			ChangeMovementState(new PlayerJumpingState(this));	
-		}
-		
-		if ( ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) && grounded))
-		    ChangeMovementState(new PlayerRunningState(this));
-		
-		if ( Input.GetKeyDown (KeyCode.F) ){
-			ChangeMovementState (new PlayerDashState(this));
-		}
-	}
 	
 	void UpdateGroundedCheck(){
 		grounded = Physics2D.OverlapCircle (groundCheck.position, 0.2f, whatIsGround);
@@ -96,6 +94,8 @@ public class Player : MonoBehaviour {
 	
 	void FlipCheck(){
 		hMovement = Input.GetAxis ("Horizontal");
+		if (anim.GetBool("shooting close"))
+			hMovement = 0;
 		if ( (TryingToMoveRight () && !facingRight)
 		    || (TryingToMoveLeft () && facingRight) ){
 			Flip ();
@@ -106,7 +106,6 @@ public class Player : MonoBehaviour {
 		facingRight = !facingRight;
 		// rotate 180 degrees
 		this.transform.RotateAround (Vector3.up, Mathf.PI);
-		
 	}
 	
 	private bool OffGround(){

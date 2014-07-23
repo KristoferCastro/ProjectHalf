@@ -11,10 +11,13 @@ public class PlayerShootingScript : MonoBehaviour {
 	bool disabled = false;
 	
 	bool charging = false;
+	bool shooting = false;
+	bool shootingClose = false;
 	
 	public GameObject projectile;
 	public GameObject chargeEffect;
 	public GameObject demonHand;
+	public Player player;
 	
 	GameObject chargeEffectClone;
 	Animator anim;
@@ -31,6 +34,9 @@ public class PlayerShootingScript : MonoBehaviour {
 		if (disabled) return;
 		
 		anim.SetBool ("charging", charging);
+		anim.SetBool("shooting", shooting);
+		anim.SetBool("shooting close", shootingClose);
+		
 		
 		if (chargeEffectClone != null)
 			chargeEffectClone.transform.position = demonHand.transform.position;
@@ -50,17 +56,39 @@ public class PlayerShootingScript : MonoBehaviour {
 		
 		if (Input.GetKeyUp (KeyCode.Space)){
 			charging = false;
+			
+			if (shootForce < 100){
+				shootingClose = true;
+				shootForce += 100;
+			}else{
+				shooting = true;
+			}
+			StartCoroutine("ShotDelay");
 			chargeEffectClone.SetActive(false);
 			projectile = (GameObject) Instantiate (projectile);
 			projectile.transform.position = demonHand.transform.position;
-			projectile.rigidbody2D.AddForce(Vector2.right*shootForce);
-			// release
-			Debug.Log (shootForce);
+			
+			if (player.facingRight){
+				projectile.rigidbody2D.AddForce(Vector2.right*shootForce);
+			}
+			
+			else{
+				projectile.rigidbody2D.AddForce(Vector2.right*-shootForce);
+			}	
 		}
 		
 		//Debug.Log (shootForce);
-	} 
+	}
+	 
+	IEnumerator ShotDelay(){
+		yield return new WaitForSeconds(0.8f);
+		DisableShooting();
+	}
 	
+	void DisableShooting(){
+		shooting = false;
+		shootingClose = false;
+	}
 	// Update is called once per frame
 	void Update () {
 		HandleInput ();
