@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 50: {fileID: 5000000}
   - 58: {fileID: 5800000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: DemonChargeEffect
   m_TagString: Untagged
@@ -42,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.24458265, y: -2.76759219, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -84,7 +85,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .5
+  m_Radius: .25
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -97,6 +98,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337a948664b1204eb97b2e8f1b4b298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42fe9e0b18053f4499c06998c402f2b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  demonSummon: {fileID: 100002, guid: a79edaaf2583f5443a14fbf9d9043def, type: 2}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  summonEffect: {fileID: 100000, guid: 79ca4b93c29ec8a4da67265ee6998627, type: 2}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

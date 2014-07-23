@@ -362,7 +362,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Running
-  m_Speed: 2.5
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 8ffb1dae4be879c4dbef96b403ad3a9e, type: 2}
@@ -407,7 +407,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Shoot Close
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 89f65e0ba1315c94db33495f44ccd3e8, type: 2}

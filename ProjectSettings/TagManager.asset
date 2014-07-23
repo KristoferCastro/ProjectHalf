@@ -4,6 +4,7 @@
 TagManager:
   tags:
   - DemonHand
+  - Ground
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   User Layer 10: Background
   User Layer 11: Ground
   User Layer 12: Emma
-  User Layer 13: 
+  User Layer 13: Summons
   User Layer 14: 
   User Layer 15: 
   User Layer 16: 
@@ -49,4 +50,8 @@ TagManager:
   - name: Foreground
     userID: 2
     uniqueID: 3429159809
+    locked: 0
+  - name: Summon
+    userID: 3
+    uniqueID: 1051372639
     locked: 0
