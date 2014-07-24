@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: e43db50dc25dc3d4e946d68cb94aac1e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: HD
+    21300002: HD_head
+    21300004: HD_upperArmR
+    21300006: HD_body
+    21300008: HD_upperArmR
+    21300010: HD_lowerArmR
+    21300012: HD_upperLegR
+    21300014: HD_upperLegL
+    21300016: HD_lowerArmR
+    21300018: HD_lowerLegR
+    21300020: HD_lowerLegL
+    21300022: HD_footR
+    21300024: HD_footR
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: HD_head
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 199
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_upperArmR
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 147
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_body
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 115
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_upperArmR
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 137
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_lowerArmR
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_upperLegR
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 68
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_upperLegL
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 72
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_lowerArmR
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 84
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_lowerLegR
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 22
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_lowerLegL
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 21
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_footR
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HD_footR
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

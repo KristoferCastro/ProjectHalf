@@ -20,6 +20,8 @@ public class PlayerShootingScript : MonoBehaviour {
 	public Player player;
 	
 	GameObject chargeEffectClone;
+	GameObject projectileClone;
+	
 	Animator anim;
 	
 	// Use this for initialization
@@ -65,15 +67,14 @@ public class PlayerShootingScript : MonoBehaviour {
 			}
 			StartCoroutine("ShotDelay");
 			chargeEffectClone.SetActive(false);
-			projectile = (GameObject) Instantiate (projectile);
-			projectile.transform.position = demonHand.transform.position;
+			projectileClone = (GameObject) Instantiate (projectile, demonHand.transform.position, Quaternion.identity);
 			
 			if (player.facingRight){
-				projectile.rigidbody2D.AddForce(Vector2.right*shootForce);
+				projectileClone.rigidbody2D.AddForce(Vector2.right*shootForce);
 			}
 			
 			else{
-				projectile.rigidbody2D.AddForce(Vector2.right*-shootForce);
+				projectileClone.rigidbody2D.AddForce(Vector2.right*-shootForce);
 			}	
 		}
 		
@@ -81,7 +82,7 @@ public class PlayerShootingScript : MonoBehaviour {
 	}
 	 
 	IEnumerator ShotDelay(){
-		yield return new WaitForSeconds(0.8f);
+		yield return new WaitForSeconds(0.5f);
 		DisableShooting();
 	}
 	

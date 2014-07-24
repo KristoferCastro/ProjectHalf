@@ -20,7 +20,7 @@ TagManager:
   User Layer 11: Ground
   User Layer 12: Emma
   User Layer 13: Summons
-  User Layer 14: 
+  User Layer 14: HD
   User Layer 15: 
   User Layer 16: 
   User Layer 17: 
@@ -54,4 +54,8 @@ TagManager:
   - name: Summon
     userID: 3
     uniqueID: 1051372639
+    locked: 0
+  - name: HD
+    userID: 4
+    uniqueID: 148992589
     locked: 0
