@@ -6,4 +6,40 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LevelA.unity
+    path: Assets/Scenes/MainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/IntroScenePreTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+  - enabled: 1
+    path: Assets/Scenes/ToFriendsHouseScenePreTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/ToFriendsHouseScene.unity
+  - enabled: 1
+    path: Assets/Scenes/FriendsHouseScenePreTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/FriendsHouseScene.unity
+  - enabled: 1
+    path: Assets/Scenes/FriendsHouseScenePostTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/HDBuildingScenePreTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/HDBuildingScene.unity
+  - enabled: 1
+    path: Assets/Scenes/HDBossPreTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/BossBattleAScenePreTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/BossBattleAScene.unity
+  - enabled: 1
+    path: Assets/Scenes/BossBattleAScenePostTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/BossBattleBScenePreTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/BossBattleBScene.unity
+  - enabled: 1
+    path: Assets/Scenes/BossBattleBScenePostTalking.unity
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity

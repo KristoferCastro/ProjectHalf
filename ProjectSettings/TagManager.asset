@@ -5,6 +5,11 @@ TagManager:
   tags:
   - DemonHand
   - Ground
+  - Wall
+  - Demon Summons
+  - Enemy
+  - 
+  - EnemyProjectile
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -21,13 +26,13 @@ TagManager:
   User Layer 12: Emma
   User Layer 13: Summons
   User Layer 14: HD
-  User Layer 15: 
-  User Layer 16: 
-  User Layer 17: 
-  User Layer 18: 
-  User Layer 19: 
-  User Layer 20: 
-  User Layer 21: 
+  User Layer 15: BossBones
+  User Layer 16: BossControls
+  User Layer 17: Boss
+  User Layer 18: GroundCheck
+  User Layer 19: EnvironmentObjects
+  User Layer 20: PlayerSummonProjectile
+  User Layer 21: EnemySearchRange
   User Layer 22: 
   User Layer 23: 
   User Layer 24: 
@@ -43,13 +48,17 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
-  - name: Player
-    userID: 1
-    uniqueID: 4255192887
+  - name: Boss
+    userID: 5
+    uniqueID: 3227516857
     locked: 0
   - name: Foreground
     userID: 2
     uniqueID: 3429159809
+    locked: 0
+  - name: Player
+    userID: 1
+    uniqueID: 4255192887
     locked: 0
   - name: Summon
     userID: 3
